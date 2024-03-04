@@ -3,6 +3,7 @@ const Coichito = require("../models/coichito_schema")
 const getCoichito = async (request, response) => {
 
     try {
+
         console.log(request.params.id)
         response.send("ok")
 
@@ -17,6 +18,7 @@ const getCoichito = async (request, response) => {
 
     const getCoichitos = async (request, response) => {
         try {
+            console.log(request.headers)
             const data = await Coichito.findAll()
             return response.json(data)
         } catch (error) {

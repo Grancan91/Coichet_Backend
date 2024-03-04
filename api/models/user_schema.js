@@ -8,7 +8,8 @@ const User = sequelize.define('user', {
         autoIncrement: true
     },
     email: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        unique: true
     },
     password: {
         type: DataTypes.STRING
@@ -17,6 +18,6 @@ const User = sequelize.define('user', {
         type: DataTypes.ENUM("user","admin"),
         defaultValue: "user"
     }
-});
+}, { timestamps: false });
 
 module.exports = User

@@ -1,5 +1,7 @@
 
 const { Sequelize } = require('sequelize') 
+//const relationship = require('./relationship')
+
 require('events').EventEmitter.defaultMaxListeners = 15;
 
     const sequelize = new Sequelize(
@@ -22,14 +24,15 @@ require('events').EventEmitter.defaultMaxListeners = 15;
     }
     
     async function db_sync() {
-
     try {
+        require('./relationship')
         await sequelize.sync({
             //method[VALUE] 
             alter: true // Force True to Erase all Tables
              })
         console.log('Models Synchronized!')
     } catch (error) {
+        console.log(error)
         throw error
     }
 }

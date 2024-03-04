@@ -14,7 +14,7 @@ const appExpress = express()
 
     try {
         appExpress.listen(process.env.API_PORT, () => {
-            console.log(`Server Liseting on port: ${process.env.API_PORT}`)
+            console.log(`Server Liseting on ported: ${process.env.API_PORT}`)
         })
     } catch (error) {
         console.log(error)
