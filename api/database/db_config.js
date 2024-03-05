@@ -4,7 +4,7 @@ const { Sequelize } = require('sequelize')
 
 require('events').EventEmitter.defaultMaxListeners = 15;
 
-  /*   const sequelize = new Sequelize(
+    const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASSWORD,{
@@ -12,9 +12,9 @@ require('events').EventEmitter.defaultMaxListeners = 15;
         dialect: process.env.DB_DIALECT,
         port: process.env.DB_PORT,
         //logging: console.log
-    }); */
+    });
 
-    const sequelize = new Sequelize(process.env.DB_URI)
+    //const sequelize = new Sequelize(process.env.DB_URI)
 
     async function db_connect() {
         try {
