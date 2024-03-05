@@ -13,8 +13,8 @@ const appExpress = express()
     .use(morgan)
 
     try {
-        appExpress.listen(process.env.API_PORT, () => {
-            console.log(`Server Liseting on ported: ${process.env.API_PORT}`)
+        appExpress.listen(process.env.PORT, () => {
+            console.log(`Server Liseting on port: ${process.env.PORT}`)
         })
     } catch (error) {
         console.log(error)
