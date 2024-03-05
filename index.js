@@ -21,6 +21,6 @@ const appExpress = express()
     }
 
 db_connect()
-//db_sync()
+db_sync()
 
 module.exports = { appExpress }
