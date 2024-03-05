@@ -25,7 +25,7 @@ require('events').EventEmitter.defaultMaxListeners = 15;
     
     async function db_sync() {
     try {
-        require('./relationship')
+        //require('./relationship')
         await sequelize.sync({
             //method[VALUE] 
             alter: true // Force True to Erase all Tables

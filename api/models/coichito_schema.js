@@ -10,11 +10,23 @@ const Coichito = sequelize.define('coichito', {
     name: {
         type: DataTypes.STRING
     },
+    description: {
+        type: DataTypes.STRING
+    },
+    material: {
+        type: ENUM('Poliester', 'Algodon', 'None')
+    }, 
     stock: {
         type: DataTypes.BOOLEAN
     },
+    category: {
+        type: ENUM('Plusie','Llavero', 'None')
+    },
     size: {
-        type: ENUM('X','M', 'S', 'None')
+        type: ENUM('+30cm', '+15cm', '-15cm')
+    },
+    price: {
+        type: DataTypes.DOUBLE
     }
 }, { timestamps: false });
 
