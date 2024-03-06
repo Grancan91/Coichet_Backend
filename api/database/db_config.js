@@ -13,7 +13,9 @@ require('events').EventEmitter.defaultMaxListeners = 15;
         port: process.env.DB_PORT,
         //logging: console.log
     });
-    
+
+    //const sequelize = new Sequelize(process.env.DB_URI)
+
     async function db_connect() {
         try {
             await sequelize.authenticate()
